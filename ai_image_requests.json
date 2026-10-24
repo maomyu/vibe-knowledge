@@ -1,0 +1,17 @@
+{
+ "_note": "可选。所有画面默认由代码程序化生成；以下图像仅作为“代码再加工的底层纹理”（会被灰度化/调色/视差/雾化/遮罩处理），缺失时自动回退到程序化版本。用户生成后放到 target_path 即可，无需改代码。不要用于人物、地图、3D 物体。",
+ "requests": [
+  {"id":"dfb_moonsea_clouds","aspect":"16:9","size":"2048x1152","target_path":"tests/ink-paper-typography/plates/moonsea_clouds.png",
+   "prompt":"Black and white long-exposure photograph of a dark night sea under a thick layer of horizontal stratus clouds, full moon hidden just above the clouds, soft silver rim light on cloud edges, calm ocean with faint long reflections, high contrast monochrome, no text, no boats, no people, cinematic, film grain",
+   "used_in":"定风波 38.4–46.0s 月海场景，叠在 proc moon_sea 之上做云层纹理(multiply+视差)"},
+  {"id":"dfb_bamboo_mist_texture","aspect":"16:9","size":"2048x1152","target_path":"tests/ink-paper-typography/plates/bamboo_mist_tex.png",
+   "prompt":"Monochrome Chinese ink wash texture of distant bamboo grove dissolving into thick fog, very low contrast, pale grey on off-white rice paper, soft gradients, no foreground stalks, no people, no text, minimalist",
+   "used_in":"定风波 22.5–26s 雾竹林远景层（程序化竹子前景之后）"},
+  {"id":"dfb_river_snow_texture","aspect":"16:9","size":"2048x1152","target_path":"tests/ink-paper-typography/plates/river_snow_tex.png",
+   "prompt":"Grayscale photograph of a wide misty river at dawn in winter, faint far shoreline of low hills, light snowfall, overcast sky blending into water, extremely minimal, no boats, no people, no text",
+   "used_in":"定风波 26–31s 江雪/湖舟场景远景底纹（小舟、蓑笠翁、雪由代码绘制）"},
+  {"id":"curse_paper_fiber","aspect":"1:1","size":"2048x2048","target_path":"skill/assets/tex/paper_fiber.png",
+   "prompt":"Seamless tileable macro texture of warm off-white handmade paper with visible fibers and subtle stains, even lighting, no shadows, no text",
+   "used_in":"知识诅咒 纸张卡片/quotecard 的纸纹 multiply 层（当前为 fbm 噪声替代）"}
+ ]
+}

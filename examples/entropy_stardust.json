@@ -1,0 +1,92 @@
+{
+ "style": "stardust-timeline",
+ "title": "Vibe知识大赏 | 熵 混乱之箭",
+ "size": [
+  1024,
+  576
+ ],
+ "fps": 30,
+ "duration": 20.0,
+ "bgm": {
+  "src": "audio/your-licensed-bgm.wav",
+  "note": "Provide your own licensed BGM; reference Douyin tracks are NOT redistributed."
+ },
+ "audio_mix": "mix.wav",
+ "overlays": [
+  {
+   "type": "kicker",
+   "num": "01",
+   "zh": "熵",
+   "en": "ENTROPY",
+   "t0": 0.8,
+   "t1": 4.5
+  }
+ ],
+ "scenes": [
+  {
+   "t0": 0,
+   "t1": 10,
+   "bg": "stars",
+   "fade_in": 0.8,
+   "fade_out": 0.5,
+   "elements": [
+    {
+     "type": "ltext",
+     "text": "打碎的杯子",
+     "x": 512,
+     "y": 245,
+     "size": 48,
+     "t0": 1.2,
+     "t1": 9.6,
+     "cps": 2.5
+    },
+    {
+     "type": "meter",
+     "t0": 4.5,
+     "t1": 9.6,
+     "y": 330,
+     "x0": 380,
+     "x1": 650,
+     "v0": 0,
+     "v1": 0.9,
+     "label": "S ↑",
+     "tag": "熵  ENTROPY",
+     "color": "#ddc79a"
+    }
+   ]
+  },
+  {
+   "t0": 10,
+   "t1": 20,
+   "bg": "stars",
+   "fade_in": 0.4,
+   "fade_out": 1.0,
+   "elements": [
+    {
+     "type": "ltext",
+     "text": "为什么不会自己复原",
+     "x": 512,
+     "y": 245,
+     "size": 48,
+     "t0": 10.3,
+     "t1": 19.5,
+     "cps": 5
+    }
+   ]
+  }
+ ],
+ "subtitles": [
+  {
+   "t0": 2.0,
+   "t1": 9.4,
+   "text": "杯子碎了，从来不会自己拼回去。",
+   "en": "A broken cup never reassembles itself."
+  },
+  {
+   "t0": 10.8,
+   "t1": 19.2,
+   "text": "因为混乱的方式，远比整齐的方式多。",
+   "en": "Because there are far more ways to be messy than to be neat."
+  }
+ ]
+}

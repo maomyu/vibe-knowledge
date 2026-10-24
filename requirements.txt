@@ -1,0 +1,17 @@
+# Core render stack (Linux / macOS; Python 3.10+ recommended, tested on 3.13)
+skia-python>=87.0
+numpy>=1.26
+Pillow>=10.0
+opencv-python-headless>=4.8
+librosa>=0.10
+soundfile>=0.12
+edge-tts>=6.1
+
+# Optional: analysis / remake QA (not required to render new videos)
+# rapidocr_onnxruntime
+# faster-whisper
+# demucs
+
+# System dependency (not pip): ffmpeg
+#   Debian/Ubuntu: sudo apt-get install -y ffmpeg fonts-noto-cjk
+#   macOS: brew install ffmpeg

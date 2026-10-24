@@ -1,0 +1,412 @@
+{
+ "style": "evolution-silhouette",
+ "title": "从结绳到芯片",
+ "size": [
+  1280,
+  720
+ ],
+ "fps": 30,
+ "duration": 30,
+ "overlays": [
+  {
+   "type": "sub",
+   "en": "Long ago, counting was a knot in a rope.",
+   "zh": "很久以前，计算只是绳子上的一个结。",
+   "text": "很久以前",
+   "t0": 0.8,
+   "t1": 5.6,
+   "y": 516,
+   "size": 19
+  },
+  {
+   "type": "sub",
+   "en": "Then it became beads on a wire.",
+   "zh": "后来，它变成了算盘上的珠子。",
+   "text": "后来它变",
+   "t0": 5.9,
+   "t1": 10.6,
+   "y": 516,
+   "size": 19
+  },
+  {
+   "type": "sub",
+   "en": "Machines of iron learned to add.",
+   "zh": "钢铁的机器，学会了加法。",
+   "text": "钢铁的机",
+   "t0": 10.9,
+   "t1": 15.6,
+   "y": 516,
+   "size": 19
+  },
+  {
+   "type": "sub",
+   "en": "Cities lit up with a billion tiny switches.",
+   "zh": "城市里，亮起了亿万个小开关。",
+   "text": "城市里亮",
+   "t0": 15.9,
+   "t1": 21.6,
+   "y": 516,
+   "size": 19
+  },
+  {
+   "type": "sub",
+   "en": "And now it walks beside us.",
+   "zh": "如今，它走在我们身边。",
+   "text": "如今它走",
+   "t0": 21.9,
+   "t1": 26.4,
+   "y": 516,
+   "size": 19
+  },
+  {
+   "type": "title",
+   "zh": "我们数了五千年，才数到今天。",
+   "en": "It took us 5,000 years to count this far.",
+   "text": "我们数了",
+   "t0": 27,
+   "t1": 30,
+   "y": 280,
+   "size": 22
+  }
+ ],
+ "scenes": [
+  {
+   "t0": 0,
+   "t1": 5.8,
+   "fade_in": 0.6,
+   "elements": [
+    {
+     "type": "sky",
+     "cols": [
+      "#5a4a7a",
+      "#b8809a",
+      "#f0b8a0"
+     ],
+     "sun": [
+      700,
+      230,
+      28
+     ]
+    },
+    {
+     "type": "hills",
+     "y": 380,
+     "col": "#3a2c48",
+     "amp": 20,
+     "scroll": 8
+    },
+    {
+     "type": "trees",
+     "items": [
+      [
+       150,
+       1,
+       "fern"
+      ],
+      [
+       480,
+       1.2,
+       "fern"
+      ],
+      [
+       860,
+       1,
+       "fern"
+      ]
+     ],
+     "col": "#140e1a",
+     "y": 470,
+     "kind": "fern",
+     "scroll": 20
+    },
+    {
+     "type": "ground",
+     "y": 470,
+     "col": "#140e1a"
+    },
+    {
+     "type": "walker",
+     "kind": "ape",
+     "x": [
+      [
+       0,
+       300
+      ],
+      [
+       5.8,
+       400
+      ]
+     ],
+     "y": 470,
+     "s": 1.1
+    }
+   ]
+  },
+  {
+   "t0": 5.8,
+   "t1": 10.8,
+   "fade_in": 0.8,
+   "elements": [
+    {
+     "type": "sky",
+     "cols": [
+      "#d06040",
+      "#e8905a",
+      "#f8d0a0"
+     ],
+     "sun": [
+      600,
+      330,
+      60
+     ]
+    },
+    {
+     "type": "trees",
+     "items": [
+      [
+       200,
+       1,
+       "acacia"
+      ],
+      [
+       700,
+       1.3,
+       "acacia"
+      ]
+     ],
+     "col": "#5a2018",
+     "y": 440,
+     "kind": "acacia",
+     "scroll": 15
+    },
+    {
+     "type": "ground",
+     "y": 460,
+     "col": "#2a1410"
+    },
+    {
+     "type": "walker",
+     "kind": "staff",
+     "x": [
+      [
+       5.8,
+       380
+      ],
+      [
+       10.8,
+       470
+      ]
+     ],
+     "y": 470,
+     "s": 1.1
+    }
+   ]
+  },
+  {
+   "t0": 10.8,
+   "t1": 15.8,
+   "fade_in": 0.8,
+   "elements": [
+    {
+     "type": "sky",
+     "cols": [
+      "#3a3430",
+      "#6a5a50",
+      "#8a7a68"
+     ]
+    },
+    {
+     "type": "city",
+     "y": 440,
+     "col": "#2a2420",
+     "scroll": 12
+    },
+    {
+     "type": "smoke",
+     "items": [
+      [
+       300,
+       420,
+       2
+      ],
+      [
+       750,
+       400,
+       2.5
+      ]
+     ],
+     "col": "#1a1614"
+    },
+    {
+     "type": "ground",
+     "y": 470,
+     "col": "#141010"
+    },
+    {
+     "type": "walker",
+     "kind": "man",
+     "x": [
+      [
+       10.8,
+       380
+      ],
+      [
+       15.8,
+       470
+      ]
+     ],
+     "y": 490,
+     "s": 1.1
+    }
+   ]
+  },
+  {
+   "t0": 15.8,
+   "t1": 21.8,
+   "fade_in": 0.8,
+   "elements": [
+    {
+     "type": "sky",
+     "cols": [
+      "#101828",
+      "#203050",
+      "#405070"
+     ],
+     "stars": 0.8
+    },
+    {
+     "type": "city",
+     "y": 480,
+     "col": "#0a1020",
+     "lights": "#60c0ff",
+     "hmax": 220,
+     "scroll": 10
+    },
+    {
+     "type": "ground",
+     "y": 480,
+     "col": "#05080e"
+    },
+    {
+     "type": "walker",
+     "kind": "man",
+     "x": [
+      [
+       15.8,
+       360
+      ],
+      [
+       21.8,
+       460
+      ]
+     ],
+     "y": 495,
+     "s": 1.1
+    }
+   ]
+  },
+  {
+   "t0": 21.8,
+   "t1": 26.8,
+   "fade_in": 0.8,
+   "elements": [
+    {
+     "type": "sky",
+     "cols": [
+      "#6a5a8a",
+      "#a888b0",
+      "#e0c8d0"
+     ],
+     "rays": 0.18,
+     "rayxy": [
+      512,
+      420
+     ]
+    },
+    {
+     "type": "city",
+     "y": 470,
+     "col": "#8a78a0",
+     "hmax": 200,
+     "scroll": 6
+    },
+    {
+     "type": "trees",
+     "items": [
+      [
+       0,
+       1
+      ],
+      [
+       170,
+       1
+      ],
+      [
+       340,
+       1
+      ],
+      [
+       510,
+       1
+      ],
+      [
+       680,
+       1
+      ],
+      [
+       850,
+       1
+      ],
+      [
+       1020,
+       1
+      ]
+     ],
+     "col": "#4a3a58",
+     "y": 490,
+     "kind": "round",
+     "scroll": 14,
+     "wrap": 1300
+    },
+    {
+     "type": "ground",
+     "y": 490,
+     "col": "#1a1424",
+     "grass": 14,
+     "scroll": 14
+    },
+    {
+     "type": "walker",
+     "kind": "man",
+     "x": [
+      [
+       21.8,
+       380
+      ],
+      [
+       26.8,
+       450
+      ]
+     ],
+     "y": 500,
+     "s": 1.2,
+     "speed": 1.2,
+     "child": 60
+    }
+   ]
+  },
+  {
+   "t0": 26.8,
+   "t1": 30,
+   "fade_in": 0.6,
+   "elements": [
+    {
+     "type": "tint",
+     "col": "#000000",
+     "fi": 0,
+     "fo": 0
+    }
+   ]
+  }
+ ]
+}

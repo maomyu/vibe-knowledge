@@ -1,0 +1,33 @@
+{
+  "style": "stardust-timeline",
+  "title": "Demo stub — replace with real script",
+  "size": [
+    1080,
+    1920
+  ],
+  "fps": 30,
+  "duration": 8,
+  "bgm": {
+    "src": "audio/your-licensed-bgm.wav",
+    "fade_out": 1.0,
+    "note": "Required: supply your own licensed track"
+  },
+  "audio_mix": "mix.wav",
+  "scenes": [
+    {
+      "t0": 0,
+      "t1": 8,
+      "bg": "#030305",
+      "elements": []
+    }
+  ],
+  "overlays": [],
+  "subtitles": [
+    {
+      "t0": 0.5,
+      "t1": 7.5,
+      "text": "这是演示占位字幕 · 请换真实文案",
+      "primary": true
+    }
+  ]
+}

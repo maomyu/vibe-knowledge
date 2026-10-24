@@ -1,0 +1,46 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.env
+.python-version
+
+# Render outputs
+output/
+outputs/
+*.mp4
+*.mov
+*.webm
+*.parts/
+
+# User-supplied / generated audio (keep folder README)
+audio/*
+!audio/README.md
+music/
+*.wav
+*.mp3
+examples/mix.wav
+examples/_bgm.wav
+examples/beats.json
+examples/narration_words.json
+examples/_n*.mp3
+
+# Local plates / caches
+plates/
+*.npy
+.DS_Store
+
+# Large local-only trees
+tests/
+analysis/
+frames/
+videos/
+dy-home/
+
+# Secrets
+.env*
+cookies*
+*token*
+credentials*
