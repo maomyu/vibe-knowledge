@@ -151,6 +151,24 @@ pip install -r requirements.txt
 - [`SKILL.md`](SKILL.md) — production rules  
 - [`NOTICE.md`](NOTICE.md) — **BGM not included**; font & geo attributions  
 
-### License
+#
+## Demo clips（开源宣传案例）
+
+短片在 [`examples/x-promo/`](examples/x-promo/)（约 20–30 秒，可直接挂 X Articles）：
+
+| 文件 | 说明 |
+|------|------|
+| `montage_vibe30styles_28s.mp4` | 30 风格混剪总览 · ~28s |
+| `clip_flat-cartoon-situation_spotlight.mp4` | 聚光灯效应 |
+| `clip_golden-cup-cinema_commitment.mp4` | 承诺升级 |
+| `clip_golden-fractal-vertical_generational.mp4` | 代际循环 |
+| `clip_neon-halo-profile_halo.mp4` | 光环效应 |
+| `clip_storm-countdown-vertical_scarcity.mp4` | 稀缺效应 |
+
+完整约 2 分钟成片不进仓（体积）。**完整 BGM 母带不随仓分发**（见 `audio/README.md`）。
+
+宣传长文草稿：[`docs/X_PROMO_ARTICLE_CN.md`](docs/X_PROMO_ARTICLE_CN.md) / [`docs/X_PROMO_ARTICLE_EN.md`](docs/X_PROMO_ARTICLE_EN.md)。
+
+## License
 
 MIT © 2026 [maomyu](https://github.com/maomyu). Third-party fonts (OFL), Natural Earth (public domain), DataV provinces & AWS Terrarium tiles: see `NOTICE.md`. Reference Douyin videos/audio are **not** redistributed.

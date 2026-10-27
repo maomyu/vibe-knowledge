@@ -315,7 +315,7 @@ elements（由 template.py 自动整理的参数键，详见各函数）: geomap
 ### 7.x greek-vase-epic (768x576 → 设计 1024x768)
 赤陶橙底黑绘剪影 + 回纹饰带 + 黑色字幕条。elements: vase(底) · band(回纹) · sea{y} · cliff{side,w,seed} · ship{x,y,s} · figure{x,y,s,kind=warrior|woman,arm=spear|point|shield|bound|none,halo,helmet,red,face} · monster{x,y,n,len,reach[[t,0..1]],maw[x,y,s]} · whirl{x,y,r} · scale{x,y,tilt,left,right} · medal{x,y,r,inner} · island{x,y} · clouds{items[[x,y,s]]} · sun{x,y} · tag{x,y,gr,zh} · logcard{title,lines,note} · title{text,x,y,size}(描边) · sub{text,y,size}（`[关键词]` 橙色；双行分两个 sub，下行晚 0.3–0.5s）· tint · flash{t0,a}（同色切换处加 a=.5 白闪）。示例 examples/greek_icarus.json。
 - dusk 跨日界线：`map.wrap:true` 时河流复制一份 +360°；地名/路线经度可写 >180（如纽约 286.06），地形瓦片本来就按 x%2^z 取，自动跨太平洋取景。大圆航线等曲线可在 build 脚本里算好点列传给 chain/faintroute 的 route（示例 output/plane-route/build.py）。
-- BGM（所有风格）：music/ 下的 mp3 只是约 30 秒的识曲片段，旧 audio.py 用 `-stream_loop` 硬循环，每 30 秒会有一个接缝，听起来“一卡一卡”。现在 audio.py 会先探测时长：够长就直接截取，太短就用 acrossfade（`bgm.xfade`，默认 3 秒）交叉淡化拼接，并打印 WARNING。优先用用户自备的完整授权曲目（建议 ≥ 成片时长，例如 ~190 秒）。本仓库不附带任何第三方 BGM。librosa 缺失时会跳过 beats.json，不再中断。
+- BGM（所有风格）：music/ 下的 mp3 只是约 30 秒的识曲片段，旧 audio.py 用 `-stream_loop` 硬循环，每 30 秒会有一个接缝，听起来“一卡一卡”。现在 audio.py 会先探测时长：够长就直接截取，太短就用 acrossfade（`bgm.xfade`，默认 3 秒）交叉淡化拼接，并打印 WARNING。优先用完整曲目，例如 audio/7693296008339442986.wav（约 190 秒，开智小曲完整版）。librosa 缺失时会跳过 beats.json，不再中断。
 
 #### dusk-map-chronicle v3：密集镜头扩展（2026-10，题材无关）
 画面丰富度的依据见 `analysis/dusk-map-chronicle/richness.md`：参考片逐秒帧差中位数为 5.35，帧差大于 8 的变化每 10 秒约 3 次，且从不静止。用 `python scripts/density.py out.mp4 label` 自测，目标是中位数 ≥3，且不出现超过 1.5 秒的静止。

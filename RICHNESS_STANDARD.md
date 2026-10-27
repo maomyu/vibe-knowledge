@@ -1,7 +1,7 @@
 # 画面丰富度标准（所有 vibe知识 风格强制）
 
-依据：dusk-map-chronicle 模板 v3 与实测密度基线。
-测量：`python scripts/density.py <video.mp4> <label>`（1fps 灰度帧差）。
+依据：`analysis/dusk-map-chronicle/richness.md` + dusk-map-chronicle template v3。
+测量：`python skill/scripts/density.py <video.mp4> <label>`（1fps 灰度帧差）。
 
 ## 1. 量化门槛（交付前自检）
 
@@ -47,7 +47,7 @@
 
 ## 5. BGM
 
-- 请自备完整授权 BGM（建议 ≥ 成片时长，如 ~190s）；短轨会被 `audio.py` 用 acrossfade 拼接并发 WARNING。  
+- `music/` 下 mp3 多为 ~30s 识曲片段 → **优先用 `audio/` 完整曲目**（如 `audio/7693296008339442986.wav` ≈190s）。  
 - `audio.py`：够长则 trim；太短则 `acrossfade`（`bgm.xfade` 默认 3s）并 WARNING。  
 - 禁止听感上的硬循环接缝；全片连续 BGM + 片尾 fade_out。
 
@@ -64,15 +64,15 @@
 - [ ] 转场不全是硬切；至少用到 2 种 `tin`（或风格参考允许的集合）  
 - [ ] 每镜可见 ≥5 层（底+数据/道具+字幕+光效+相机/运动）  
 - [ ] BGM 来自完整轨或 crossfade，无 30s 卡点  
-- [ ] 自留 density 数字 / contact sheet 作为验收证明
+- [ ] 证明物落到 `tests/<slug>/richness_vN/`（contact sheet 或 density 数字 vs 参考）
 
 ## 8. 工具
 
 ```bash
 # 密度
-.venv/bin/python scripts/density.py out.mp4 label
+.venv/bin/python skill/scripts/density.py out.mp4 label
 # 对照条带
-.venv/bin/python scripts/compare.py ref.mp4 remake.mp4 outdir --excerpt a,b
+.venv/bin/python skill/scripts/compare.py ref.mp4 remake.mp4 outdir --excerpt a,b
 # 共享转场/尘点
 from engine.richness import compose_scenes, motes, apply_ken_burns
 ```
@@ -104,3 +104,13 @@ from engine.richness import compose_scenes, motes, apply_ken_burns
 ## 13. 零静止与主字幕唯一
 
 全程逐帧变化：常驻运动 + Ken Burns + 微动；`density.py` 最长静止目标 0s。同一画面只保留一条主字幕（大、清楚）；次要文案删除或降到角落，禁止叠字抢位。
+
+## 14. 底部字幕节奏（强制 · batch-4 caption pace）
+
+对照原片（如 `silhouette-stage-paper` 参考 `analysis/7692022955122937098.subs.json`：min≈2.0s / med≈2.5s，约 12 字/句 ≈4.8 字/秒）与 batch3 修好的 `white-line-doodle`（primary med≈3.0s、0 条 <1.5s）。
+
+1. **底部主字幕唯一流**：同一时刻只一条 primary 底栏；与画面大字/卡片文案**错峰或呼应**，不要同一句在底栏+画面大字同时堆两遍抢读（画面大字可短停，底栏承担完整叙事句）。
+2. **可读 dwell**：每条 primary 最短 **≥2.0s**；目标 med **2.5–3.5s**（可读优先时可略长，禁止为贴拍切成 <2s 碎片）；按字数给时：约 **4–5 汉字/秒**（12 字≈2.5–3s；18 字≈3.5–4s）。
+3. **循序渐进**：合并过碎短句；句与句之间可有 **0.1–0.3s 软间隙**；整条 ~122s 内把全文案读完，宁少句、句更长，不闪切。
+4. 仍可 snap 到附近 beat/accent，但 **可读优先于贴拍**；`beat_punch:false`；零静止 `longest_static=0` 保持。
+5. 写 script 时用 `caps_primary` 前先检查每段 lines 数是否装得进窗口（短场景窗口宁 1 句长句，勿塞 6–7 个 0.3s 碎片）。标记 `primary: true`；自检 min/med/<2s 计数与 CJK≈520–580。
